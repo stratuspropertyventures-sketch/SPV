@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rental Calculator — Stratus Property Ventures</title>
+<meta name="description" content="Model any property as a long-term or short-term rental — financing, HELOCs, depreciation, taxes, cash flow, and multi-year projections.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">SPV</span>
+      Stratus Property Ventures
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="calculator.html" class="active">Rental Calculator</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div id="root">
+  <div style="padding:60px 28px;text-align:center;color:#5A6B7B;font-family:'Libre Franklin',sans-serif;">
+    Loading calculator…
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-wrap">
+    <div class="company">Built by <strong>Jacob Martin</strong> · Stratus Property Ventures LLC</div>
+    <div class="disclaimer">For analysis purposes only — not investment, tax, or legal advice.</div>
+  </div>
+</footer>
+
+<!-- React + Recharts + Babel via CDN, no build step -->
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/prop-types@15/prop-types.js" crossorigin></script>
+<script src="https://unpkg.com/recharts@2.15.4/umd/Recharts.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+
+<script>
+  fetch("assets/calculator.jsx")
+    .then((r) => r.text())
+    .then((src) => {
+      const code = Babel.transform(src, {
+        presets: [["react", { runtime: "classic" }]],
+      }).code;
+      (0, eval)(code);
+    })
+    .catch((err) => {
+      document.getElementById("root").innerHTML =
+        '<div style="padding:60px 28px;text-align:center;color:#C0504D;font-family:\'Libre Franklin\',sans-serif;">Failed to load calculator: ' +
+        String(err.message || err) + "</div>";
+    });
+</script>
+
+</body>
+</html>
