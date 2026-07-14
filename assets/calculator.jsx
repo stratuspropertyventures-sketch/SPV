@@ -12,19 +12,19 @@ const {
 } = Recharts;
 
 const C = {
-  navy: "#122A43",
-  navyDeep: "#0C1E31",
-  steel: "#4A7BA6",
-  steelLight: "#7FA5C7",
-  green: "#2E8B57",
-  greenBright: "#3CB371",
-  amber: "#D99A2B",
-  red: "#C0504D",
-  paper: "#F6F8FA",
-  card: "#FFFFFF",
-  ink: "#1B2733",
-  inkSoft: "#5A6B7B",
-  line: "#DCE4EB",
+  navy: "#2E2013",
+  navyDeep: "#1C1309",
+  steel: "#9C7A42",
+  steelLight: "#CBAD79",
+  green: "#3E5C43",
+  greenBright: "#4F7350",
+  amber: "#B68A3E",
+  red: "#A6453B",
+  paper: "#F4EDDC",
+  card: "#FBF7EC",
+  ink: "#2E2013",
+  inkSoft: "#6B5A44",
+  line: "#DFCBA0",
 };
 
 const fmt$ = (v, dec = 0) =>
