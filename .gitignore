@@ -1,0 +1,9 @@
+# Windows / OneDrive system files
+desktop.ini
+Thumbs.db
+
+# Local dev server helper (not part of the site)
+.devserver.ps1
+
+# Editor/OS cruft
+.DS_Store

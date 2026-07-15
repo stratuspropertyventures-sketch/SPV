@@ -1,18 +1,18 @@
 :root {
-  --cream: #F4EDDC;
+  --cream: #BAA281;
   --card: #FBF7EC;
   --parchment: #E8DBB6;
   --espresso: #2E2013;
   --espresso-deep: #1C1309;
-  --bronze: #9C7A42;
+  --bronze: #7A5C2E;
   --bronze-light: #CBAD79;
-  --gold: #B68A3E;
+  --gold: #8C6A2E;
   --forest: #3E5C43;
   --forest-bright: #4F7350;
-  --red: #A6453B;
+  --red: #8A3A30;
   --ink: #2E2013;
-  --ink-soft: #6B5A44;
-  --line: #DFCBA0;
+  --ink-soft: #4A3B28;
+  --line: #A98A55;
 }
 
 * { box-sizing: border-box; }
@@ -62,23 +62,18 @@ h1, h2, h3, .brand, .wordmark {
 }
 
 .brand-mark {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: var(--cream);
+  width: 40px;
+  height: 40px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   flex-shrink: 0;
-  box-shadow: 0 0 0 1px rgba(182,138,62,0.5);
 }
 
 .brand-mark img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transform: scale(1.35);
+  object-fit: contain;
 }
 
 .nav-links {
@@ -216,7 +211,7 @@ p {
 
 /* ---------- Masthead banner ---------- */
 .masthead {
-  background: var(--espresso-deep);
+  background: var(--cream);
   text-align: center;
 }
 
@@ -228,8 +223,8 @@ p {
 }
 
 .hero {
-  background: var(--espresso-deep);
-  padding: 44px 28px 70px;
+  background: var(--cream);
+  padding: 20px 28px 60px;
 }
 
 .hero-wrap {
@@ -238,11 +233,11 @@ p {
   text-align: center;
 }
 
-.hero .eyebrow { color: var(--bronze-light); text-align: center; }
+.hero .eyebrow { color: var(--bronze); text-align: center; }
 
-.hero h1 { color: #fff; }
+.hero h1 { color: var(--espresso); }
 
-.hero .lead { color: var(--bronze-light); margin-left: auto; margin-right: auto; }
+.hero .lead { color: var(--ink-soft); margin-left: auto; margin-right: auto; }
 
 .hero .btn-row { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
 
